@@ -33,7 +33,6 @@ jobs:
       - name: Run tests
         run: npm test
         working-directory: container-deno-project
-      - name: Run server
       - name: Output information
         run: |
           echo "MONGODB_USERNAME: $MONGODB_USERNAME"
