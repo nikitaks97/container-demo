@@ -29,7 +29,9 @@ jobs:
         run: npm ci
         working-directory: container-deno-project
       - name: Run server
-        run: npm start & npx wait-on http://127.0.0.1:$PORT # requires MongoDB Atlas to accept requests from anywhere!
+        run: |
+           npm install --save-dev wait-on
+           npm start & npx wait-on http://127.0.0.1:$PORT # requires MongoDB Atlas to accept requests from anywhere!
         working-directory: container-deno-project
       - name: Run tests
         run: npm test
