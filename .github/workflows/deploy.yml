@@ -23,8 +23,8 @@ jobs:
       mongodb:
         image: mongo
         env:
-          MONGODB_INIT_ROOT_USERNAME: root
-          MONGODB_INIT_ROOT_PASSWORD: example
+          MONGO_INIT_ROOT_USERNAME: root
+          MONGO_INIT_ROOT_PASSWORD: example
          
     steps:
       - name: Get Code
